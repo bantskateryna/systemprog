@@ -3,7 +3,7 @@ import sys
 import subprocess
 import tempfile
 
-SCRIPT = os.path.abspath("head.py")
+SCRIPT = os.path.abspath("lab2ex1.py")
 PY = sys.executable
 
 def run_args(args, input_bytes=None):
