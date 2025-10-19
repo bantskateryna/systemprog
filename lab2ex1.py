@@ -74,6 +74,10 @@ def main():
 
     if args.c is not None:
         read_bytes(args.filepath, args.c, args.v, chosen_color)
+
     else:
         num_lines = args.n if args.n is not None else 10
         read_lines(args.filepath, num_lines, args.v, args.line_numbers, chosen_color)
+
+if __name__ == "__main__":
+    main()
