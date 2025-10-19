@@ -1,13 +1,22 @@
 import argparse
 import os
 
+RED     = "\033[31m"
+GREEN   = "\033[32m"
+YELLOW  = "\033[33m"
+BLUE    = "\033[34m"
+MAGENTA = "\033[35m"
+CYAN    = "\033[36m"
+RESET   = "\033[0m"
+BOLD    = "\033[1m"
+
 COLOR_MAP = {
-    "red": RED = "\033[31m",
-    "green": GREEN = "\033[32m",
-    "yellow": YELLOW = "\033[33m",
-    "blue": BLUE = "\033[34m",
-    "magenta": MAGENTA = "\033[35m",
-    "cyan": CYAN = "\033[36m",
+    "red": RED,
+    "green": GREEN,
+    "yellow": YELLOW,
+    "blue": BLUE,
+    "magenta": MAGENTA,
+    "cyan": CYAN,
     "none": ""
 }
 
@@ -78,3 +87,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
