@@ -59,11 +59,11 @@ def main():
     parser.add_argument("-v", action="store_true", help="Verbose: show filename header")
     parser.add_argument("--line-numbers", action="store_true", help="Show line numbers")
     parser.add_argument(
-    "--color",
-    choices=["red", "green", "yellow", "blue", "magenta", "cyan", "none"],
-    default="none",
-    help="Color for output text and header"
-    ) 
+        "--color",
+        choices=["red", "green", "yellow", "blue", "magenta", "cyan", "none"],
+        default="none",
+        help="Color for output text and header"
+    )
     args = parser.parse_args()
 
     if not os.path.isfile(args.filepath):
@@ -77,14 +77,3 @@ def main():
     else:
         num_lines = args.n if args.n is not None else 10
         read_lines(args.filepath, num_lines, args.v, args.line_numbers, chosen_color)
-
-    if args.c is not None:
-        read_bytes(args.filepath, args.c, args.v, args.color)
-    else:
-        num_lines = args.n if args.n is not None else 10
-        read_lines(args.filepath, num_lines, args.v, args.line_numbers, args.color)
-
-if __name__ == "__main__":
-
-    main()
-
